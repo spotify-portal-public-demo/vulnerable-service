@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: artist-service
+  description: "gRPC service for artists"
+  tags:
+    - java
+    - grpc
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: spotify-portal-public-demo/artist-service
+    sonarqube.org/project-key: spotify-portal-public-demo_artist-service
+    grafana/dashboard-selector: artist-service
+    backstage.io/kubernetes-id: artist-service
+    backstage.io/kubernetes-namespace: artist-service
+    backstage.io/kubernetes-label-selector: app=artist-service
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/content"
+  system: "system:default/metadata"

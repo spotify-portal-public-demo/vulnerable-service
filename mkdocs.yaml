@@ -1,0 +1,8 @@
+site_name: "artist-service"
+site_description: "gRPC service for artists"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
