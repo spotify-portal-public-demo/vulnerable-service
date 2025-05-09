@@ -34,3 +34,5 @@ spec:
   system: "system:default/metadata"
   providesApis:
     - artist-service-grpc
+  dependsOn:
+    - resource:artist-service-db
