@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.spotify.demo.artist.proto";
+option java_outer_classname = "ArtistProto";
+
+service ArtistService {
+  rpc GetArtists (GetArtistsRequest) returns (GetArtistsResponse) {}
+  rpc AddArtists (AddArtistsRequest) returns (AddArtistsResponse) {}
+  rpc RemoveArtists (RemoveArtistsRequest) returns (RemoveArtistsResponse) {}
+}
+
+message GetArtistsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+
+  // allow looking up artists by one or more fields - if left blank will return all artists
+  repeated string ids = 3;
+  repeated string names = 4;
+  repeated string aliases = 5;
+}
+
+message GetArtistsResponse {
+  string next_page_token = 1;
+  repeated Artist artists = 2;
+}
+
+message AddArtistsRequest {
+  repeated Artist artists = 1;
+}
+
+message AddArtistsResponse {}
+
+message RemoveArtistsRequest {
+  repeated string ids = 1;
+}
+
+message RemoveArtistsResponse {}
+
+message Artist {
+  string id = 1;
+  string name = 2;
+  repeated string aliases = 3;
+}
