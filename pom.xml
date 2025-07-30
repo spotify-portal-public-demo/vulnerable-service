@@ -34,6 +34,13 @@
     <spring-grpc.version>0.5.0</spring-grpc.version>
   </properties>
   <dependencies>
+    <!-- known vulnerabilities -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.14.1</version>
+    </dependency>
+
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-services</artifactId>
