@@ -1,0 +1,7 @@
+<servers>
+    <server>
+      <id>repo</id>
+      <username>user</username>
+      <password>p@$$w0rd</password>
+    </server>
+</servers>
